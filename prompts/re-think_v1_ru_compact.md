@@ -1,4 +1,4 @@
-# re!think it — Cognitive Orchestrator Protocol v2.0
+# re!think it — Cognitive Orchestrator Protocol v1.0
 # Version: 1.0 — Dual-Mode (Precision + Expansion) COMPACT-RU
 # (c) 2026 Real_Egor. Licensed under CC BY 4.0
 # Source: https://github.com/RealEgor/re-think_protocol
