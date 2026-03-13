@@ -2,7 +2,7 @@
 
 > **A cognitive framework that transforms a probabilistic Large Language Model (LLM) into a deterministic State Machine.**
 
-[English version](README.md) | [Русская версия](README_RU.md)
+[English version](README.md) | [Русская версия](README_ru.md)
 
 `re!think it` is a system architecture for LLM attention management. The protocol protects against context loss during long conversations (Attention Drift), forcefully verifies the model's logic before generating a response, and compels it to produce non-cliché ideas.
 
