@@ -1,4 +1,4 @@
-# re!think it Protocol v2.0 
+# re!think it Protocol v1.0 
 
 > **A cognitive framework that transforms a probabilistic Large Language Model (LLM) into a deterministic State Machine.**
 
