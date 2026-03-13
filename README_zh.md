@@ -30,11 +30,11 @@ AI 只有两类工作：**寻找精确答案**和**发散创意选项**。协议
 ## 📂 文件结构：完整版 vs 精简版
 `prompts/` 文件夹包含 4 个文件：
 
-* 🇬🇧 **[re-think_v1_en.md](prompts/re-think_v1_en.md)** / 🇷🇺 **[re-think_v1_ru.md](prompts/re-think_v1_ru.md)** (完整版)
+* 🇨🇳 **[re-think_v1_zh.md](prompts/re-think_v1_zh.md)** / 🇬🇧 **[re-think_v1_en.md](prompts/re-think_v1_en.md)** / 🇷🇺 **[re-think_v1_ru.md](prompts/re-think_v1_ru.md)** (完整版)
   * **适用对象：** 强力模型（Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro, DeepSeek-V3）。
   * **特点：** 包含详细的逻辑描述和完整的推理方程。
 
-* 🇬🇧 **[re-think_v1_en_compact.md](prompts/re-think_v1_en_compact.md)** / 🇷🇺 **[re-think_v1_ru_compact.md](prompts/re-think_v1_ru_compact.md)** (精简版)
+* 🇨🇳 **[re-think_v1_zh_compact.md](prompts/re-think_v1_zh_compact.md)** / 🇬🇧 **[re-think_v1_en_compact.md](prompts/re-think_v1_en_compact.md)** / 🇷🇺 **[re-think_v1_ru_compact.md](prompts/re-think_v1_ru_compact.md)** (精简版)
   * **适用对象：** API 调用、本地模型（Llama 3, Qwen-2.5）或严格的 Token 节省场景。
   * **特点：** 删除了所有解释，仅保留硬性指令和压缩公式。
 
