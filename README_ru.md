@@ -32,11 +32,11 @@
 ## 📂 Структура файлов: Полные vs Компактные версии
 В папке `prompts/` лежат 4 файла. Выберите тот, который подходит под ваши задачи:
 
-* 🇷🇺 **[re-think_v1_ru.md](prompts/re-think_v1_ru.md)** / 🇬🇧 **[re-think_v1_en.md](prompts/re-think_v1_en.md)** (Полные версии)
+* 🇷🇺 **[re-think_v1_ru.md](prompts/re-think_v1_ru.md)** / 🇬🇧 **[re-think_v1_en.md](prompts/re-think_v1_en.md)**/ 🇨🇳 **[re-think_v1_zh.md](prompts/re-think_v1_zh.md)** (Полные версии)
   **Для кого:** Мощные модели (Claude 3.5 Sonnet/Opus, GPT-4o, Gemini 1.5 Pro).
   **Особенность:** Содержат развернутые формулировки и полные «уравнения размышления» с описанием логики. Мощные модели считывают эту структуру и выдают феноменально глубокие ответы. Подходит для закладки в основу специализированных Агентов.
 
-* 🇷🇺 **[re-think_v1_ru_compact.md](prompts/re-think_v1_ru_compact.md)** / 🇬🇧 **[re-think_v1_en_compact.md](prompts/re-think_v1_en_compact.md)** (Компактные версии)
+* 🇷🇺 **[re-think_v1_ru_compact.md](prompts/re-think_v1_ru_compact.md)** / 🇬🇧 **[re-think_v1_en_compact.md](prompts/re-think_v1_en_compact.md)**/ 🇨🇳 **[re-think_v1_zh_compact.md](prompts/re-think_v1_zh_compact.md)** (Компактные версии)
   **Для кого:** Использование по API, локальные модели (Llama 3, Mistral) или строгая экономия токенов.
   **Особенность:** Из текста вырезаны пояснения, оставлены только жесткие, сухие императивы и формулы в максимально сжатом виде («Сделай это. Нарушение = fatal hallucination»). Работает быстрее, минимизирует когнитивную нагрузку на модель.
 
