@@ -27,16 +27,20 @@ AI 只有两类核心工作：**寻找精确答案**和**发散创意选项**。
 
 ---
 
-## 📂 文件结构：完整版 vs 精简版
+## 📂 文件结构：发布版本列表
 以下是各语言版本的文件列表：
 
 * 🇨🇳 **[re-think_v1_zh.md](prompts/re-think_v1_zh.md)** / 🇬🇧 **[re-think_v1_en.md](prompts/re-think_v1_en.md)** / 🇷🇺 **[re-think_v1_ru.md](prompts/re-think_v1_ru.md)** (完整版)
   * **适用对象：** 大参数量基座模型（Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro, DeepSeek-V3）。
-  * **特点：** 包含详细的逻辑描述、完整的推理方程与护栏规则。
+  * **特点：** 包含详细的逻辑描述、完整的推理方程与护栏规则。理想的自定义智能体（Custom Agents）底层核心。
 
 * 🇨🇳 **[re-think_v1_zh_compact.md](prompts/re-think_v1_zh_compact.md)** / 🇬🇧 **[re-think_v1_en_compact.md](prompts/re-think_v1_en_compact.md)** / 🇷🇺 **[re-think_v1_ru_compact.md](prompts/re-think_v1_ru_compact.md)** (精简版)
   * **适用对象：** API 调用、端侧部署模型（Llama 3, Qwen-2.5）或对 Token 消耗/上下文窗口严格敏感的场景。
   * **特点：** 剥离了所有的解释性文本，仅保留硬性执行指令和压缩公式。
+
+* 🎁 ⚙️ **[re-think_v1_pseudo_code.md](prompts/re-think_v1_pseudo_code.md)** (伪代码版 / Production Core 隐藏彩蛋)
+  * **适用对象：** 硬核生产环境部署 (Hardcore production)、RAG 管道、多智能体编排器以及**极限 Token 优化**。
+  * **特点：** 这是为架构师准备的专属机制。完全使用英语伪代码、集合论和逻辑运算符编写。由于 LLM 的分词器（Tokenizer）对英语代码的编码效率远高于汉字，该版本的 Token 消耗量**不仅大幅低于中文精简版，甚至比英文精简版还要低**。它以高密度语义指令的形式直接作用于模型的推理权重，提供最高的语义密度，无任何语言冗余。
 
 ---
 
@@ -53,7 +57,7 @@ AI 只有两类核心工作：**寻找精确答案**和**发散创意选项**。
 将完整版协议粘贴到智能体的“Instructions / 指令”区块中。这是创建一个具备抗幻觉能力、严格遵循框架的 AI 助手的理想方式。
 
 **场景 3：IDE 编程辅助 (Cursor, Windsurf, Copilot)**
-将精简版协议 (`compact.md`) 的内容粘贴到项目根目录的 `.cursorrules` 文件中，即可约束 AI 程序员的生成逻辑。
+将精简版协议 (`compact.md`) 或**伪代码版**的内容粘贴到项目根目录的 `.cursorrules` 文件中，即可约束 AI 程序员的生成逻辑，防止其输出模板化废话或幻觉库方法。
 
 ---
 
