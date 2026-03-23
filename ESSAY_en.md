@@ -8,7 +8,7 @@ Models have million-token context windows. They understand code, math, and logic
 
 I wanted to test a different approach: **Can we get the same stable results by building the whole logic *inside* the context window?**
 
-It started as an experiment in plain [Russian](re-think_v1_ru.md) (full and [compact](re-think_v1_ru_compact.md) versions), then [English](re-think_v1_en.md) (full and [compact](re-think_v1_en_compact.md) versions — the English compact came in at around 1,300 tokens).
+It started as an experiment in plain [Russian](prompts/re-think_v1_ru.md) (full and [compact](prompts/re-think_v1_ru_compact.md) versions), then [English](prompts/re-think_v1_en.md) (full and [compact](prompts/re-think_v1_en_compact.md) versions — the English compact came in at around 1,300 tokens).
 
 When I looked under the hood of my own prompt, I realized I had intuitively packed 7 heavy backend mechanics into a single `.md` file. 
 
@@ -139,10 +139,10 @@ Think about humans. Our working memory is famously limited. When we solve comple
 We don't need to wrap the model in external code to make it think. We need to write better, stricter cognitive contracts with the model itself.
 
 ### One Last Thing About Pseudo-Code
-The main defense against hallucination in my protocol is the strict structure and logging. But when I built a full [Chinese version](re-think_v1_zh.md) and its [compact equivalent](re-think_v1_zh_compact.md), I hit a wall. Even the compact Chinese version clocked in at around 2,100 tokens.
+The main defense against hallucination in my protocol is the strict structure and logging. But when I built a full [Chinese version](prompts/re-think_v1_zh.md) and its [compact equivalent](prompts/re-think_v1_zh_compact.md), I hit a wall. Even the compact Chinese version clocked in at around 2,100 tokens.
 
 So I asked myself: **What is the cheapest language for an LLM? What happens if you strip out every last word?**
-The answer was [pseudo-code](re-think_v1_pseudocode.md). Token-wise, it lands at roughly the same ~1,300 as the English compact — but it turned out to be significantly more resistant to attention drift.
+The answer was [pseudo-code](prompts/re-think_v1_pseudocode.md). Token-wise, it lands at roughly the same ~1,300 as the English compact — but it turned out to be significantly more resistant to attention drift.
 
 And here I found an unexpected bonus: pseudo-code didn't just save space. It killed **attention drift**. Natural language is fluid — models forget or misinterpret words over long chats. But strict math operators and variables? There is zero room for interpretation. The fact that the pseudo-code version became almost immune to hallucination was just a fantastic, unexpected bonus.
 
