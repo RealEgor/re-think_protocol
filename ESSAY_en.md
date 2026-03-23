@@ -142,7 +142,7 @@ We don't need to wrap the model in external code to make it think. We need to wr
 The main defense against hallucination in my protocol is the strict structure and logging. But when I built a full [Chinese version](prompts/re-think_v1_zh.md) and its [compact equivalent](prompts/re-think_v1_zh_compact.md), I hit a wall. Even the compact Chinese version clocked in at around 2,100 tokens.
 
 So I asked myself: **What is the cheapest language for an LLM? What happens if you strip out every last word?**
-The answer was [pseudo-code](prompts/re-think_v1_pseudocode.md). Token-wise, it lands at roughly the same ~1,300 as the English compact — but it turned out to be significantly more resistant to attention drift.
+The answer was [pseudo-code](prompts/re-think_v1_pseudo_code.md). Token-wise, it lands at roughly the same ~1,300 as the English compact — but it turned out to be significantly more resistant to attention drift.
 
 And here I found an unexpected bonus: pseudo-code didn't just save space. It killed **attention drift**. Natural language is fluid — models forget or misinterpret words over long chats. But strict math operators and variables? There is zero room for interpretation. The fact that the pseudo-code version became almost immune to hallucination was just a fantastic, unexpected bonus.
 
